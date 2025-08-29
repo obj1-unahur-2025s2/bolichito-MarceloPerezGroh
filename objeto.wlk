@@ -30,23 +30,18 @@ object pelota{
 
 //muñeco
 object muñeco{
-  var peso = 1000
-
+  var peso = 0
   method material() = vidrio
   method color() = celeste
   method peso(nuevoPeso){
     peso = nuevoPeso
   } 
-
-  method peso(){
-    return peso
-  }
 }
+
 //mas objetos
 object arito {
   method peso() {return 180}
   method color() {return celeste}
-  method peso() {return 180}
   method material() {return cobre}
 }
 
@@ -56,7 +51,6 @@ object banquito {
   method material() {return madera}
   method color() {return color}
   method color(unColor) {color = unColor}
-  method material() {return madera}
 }
 
 object cajita {
@@ -67,6 +61,19 @@ object cajita {
   method material() = cobre
   method peso() = 400 + objetoAdentro.peso()
 }
+
+object placa{
+  var peso = 1000
+  var color = rojo
+  method peso(nuevoPeso) {
+    peso = nuevoPeso
+  }
+  method color(nuevoColor) {
+    color = nuevoColor
+  }
+}
+
+
 // colores
 
 object naranja {

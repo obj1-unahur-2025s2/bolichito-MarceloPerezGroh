@@ -2,16 +2,18 @@ object bolichito {
     var objetoEnVidriera = remera
     var objetoEnMostrador = pelota
     
-    method reemplazarObjetos(nuevoEnVidriera, nuevoEnMostrador) {
+    method objectoMostrador(nuevoEnMostrador) {
+        objetoEnMostrador = nuevoEnMostrador   
+    }
+    method objetoVidriera(nuevoEnVidriera) {
         objetoEnVidriera = nuevoEnVidriera
-        objetoEnMostrador = nuevoEnMostrador
     }
 
     method esBrillante() {
         return objetoEnVidriera.material().esBrillante() && 
                objetoEnMostrador.material().esBrillante()
     }
-
+    
     method esMonocromatico() {
         return objetoEnVidriera.color() == objetoEnMostrador.color()
     }
@@ -20,9 +22,9 @@ object bolichito {
         return objetoEnVidriera.peso() < objetoEnMostrador.peso()
     } 
 
-    method tieneObjetoDeColor(unColor) {
-        return objetoEnVidriera.color() == unColor || 
-               objetoEnMostrador.color() == unColor
+    method exhibeObjeto(color) {
+        return objetoEnVidriera.color() == color || 
+               objetoEnMostrador.color() == color
     }
 
     method puedeMejorar() {
@@ -33,7 +35,7 @@ object bolichito {
         return unaPersona.leGusta(objetoEnMostrador) || unaPersona.leGusta(objetoEnVidriera)
     }
  
-    method ofrecerALaPersona(persona) {
+    method puedoOfrecer(persona) {
         return persona.leGusta(objetoEnVidriera) || persona.leGusta(objetoEnMostrador)
     } 
 

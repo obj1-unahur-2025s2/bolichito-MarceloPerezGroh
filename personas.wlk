@@ -1,9 +1,11 @@
 import bolichito.*
-import objetos.*
+import objeto.*
 import color.*
 
 
 object rosa{
+  var objeto = placa
+  method objeto() = objeto
   method leGusta(algo){
     return algo.peso() <= 2000
   } 
@@ -17,13 +19,13 @@ object estefania{
 
 object luisa{
   method leGusta(algo){
-    return algo.material() .esBrillante()
+    return algo.material().esBrillante()
   } 
 }
 
 object juan {
     method leGusta(algo) {
         return !algo.color().esFuerte() || 
-          algo.peso().between(1200,1800)
+          (algo.peso().between(1200,1800))
     }
 }
